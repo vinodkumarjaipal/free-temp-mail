@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Temp Mail Generator",
+  "url": "https://free-temp-mail.netlify.app",
+  "description": "Free temporary email generator for disposable and anonymous emails.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://free-temp-mail.netlify.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="description"
+        content="Create free temporary emails instantly with our secure disposable email generator. No signup or registration required. Perfect for protecting your privacy online, receiving one-time verification emails, testing websites, or avoiding spam. Fully responsive for desktop and mobile, easy-to-use interface, lightning-fast generation, and reliable inbox. Keep your personal email safe while using temporary emails for all your online activities.">
+
+    <meta name="keywords"
+        content="temporary email, temp email, disposable email, free temp mail, temp inbox, anonymous email, one-time email, secure email, privacy email, spam-free email, throwaway email, email generator, temporary inbox, email protection, online privacy, temporary mailbox, no signup email, fake email, free disposable inbox, temp mail service, email masking, instant temp email, temp email app, secure disposable inbox, throwaway inbox, quick temp email, test email, email shield, privacy protection email">
+
+
+    <meta name="robots" content="index, follow">
+
+
+    <meta property="og:title" content="Free Temp Mail - Disposable Email Generator">
+    <meta property="og:description"
+        content="Create instant disposable emails for temporary use. No signup, fully secure and easy to use.">
+    <meta property="og:image" content="https://free-temp-mail.netlify.app/assets/preview.png">
+    <meta property="og:url" content="https://free-temp-mail.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Temp Mail">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Temp Mail - Disposable Email Generator">
+    <meta name="twitter:description"
+        content="Generate temporary emails instantly. No signup, secure and mobile-friendly.">
+    <meta name="twitter:image" content="https://free-temp-mail.netlify.app/assets/preview.png">
+
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https: data:; font-src 'self' https: https://cdnjs.cloudflare.com;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="canonical" href="https://free-temp-mail.netlify.app">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Free Temporary Email Generator | Temp Mail, Disposable Email, No Signup</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-envelope-open-text"></i> Temp Mail
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-to-use">How to Use</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Desktop Left Sidebar Ad -->
+    <div class="desktop-ad left-ad">
+        <a href="#" target="_blank"><img src="ad-placeholder-left.jpg" alt="Sponsored Ad" loading="lazy"></a>
+    </div>
+
+    <!-- Desktop Right Sidebar Ad -->
+    <div class="desktop-ad right-ad">
+        <a href="#" target="_blank"><img src="ad-placeholder-right.jpg" alt="Sponsored Ad" loading="lazy"></a>
+    </div>
+
+    <!-- Mobile Top Banner Ad -->
+    <div class="mobile-ad top-ad">
+        <a href="#" target="_blank"><img src="ad-placeholder-top.jpg" alt="Sponsored Ad" loading="lazy"></a>
+    </div>
+
+
+
+    <div class="container">
+        <div id="alert" class="alert">
+            <span id="alertMessage"></span>
+            <button class="alert-close" onclick="closeAlert()">×</button>
+        </div>
+        <div class="section" id="home">
+            <h1><i class="fas fa-envelope-open-text"></i> Free Temporary Email Generator (Temp Mail)</h1>
+
+            <div class="email-generator">
+                <button onclick="generateAccount()" class="generate-button">
+                    <i class="fas fa-random"></i> Generate Temp Email
+                </button>
+
+                <div class="email-box">
+                    <label>Your Temp Email:</label>
+                    <div class="email-display">
+                        <span id="emailDisplay" aria-live="polite" role="status">---</span>
+                        <button onclick="copyEmail()" class="icon-button" title="Copy Email">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button class="action-button copy" onclick="copyEmail()">
+                <i class="fas fa-copy"></i>
+                Copy
+            </button>
+            <button class="action-button refresh" onclick="refreshInbox()">
+                <i class="fas fa-sync-alt" id="emailRefreshIcon"></i>
+                Refresh
+            </button>
+            <button class="action-button delete" onclick="deleteAccount()">
+                <i class="fas fa-trash"></i>
+                Delete
+            </button>
+        </div>
+
+        <div id="service" class="section">
+            <div class="inbox-container">
+                <div class="inbox-header">
+                    <h2><i class="fas fa-inbox"></i> Inbox</h2>
+                    <button class="icon-button" title="Refresh Inbox" onclick="refreshInbox()">
+                        <i id="inboxRefreshIcon" class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+
+                <div id="inbox" class="inbox">
+                    <p>No messages yet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="section info-section">
+            <h2>
+                <i class="fas fa-info-circle"></i> Understanding Temporary Email
+            </h2>
+
+            <div class="info-content">
+                <h3>What is Temporary Email?</h3>
+                <p>
+                    In today's digital world, almost every website, app, or online service asks for an email address to
+                    sign up, verify accounts, or receive notifications. While this is necessary, it often leads to spam
+                    emails, privacy risks, and inbox clutter.
+                </p>
+                <p>
+                    A <strong>temporary email</strong> (also called disposable email or temp mail) gives you a quick,
+                    short-lived email address that you can use once and throw away — without ever sharing your real
+                    email.
+                </p>
+                <ul>
+                    <li>Instantly create a free temporary email address in one click</li>
+                    <li>Protect your real inbox from spam, ads, and data leaks</li>
+                    <li>Receive emails and OTPs in real-time (perfect for sign-ups, trials, forums, etc.)</li>
+                    <li>No registration, no personal information required — 100% anonymous</li>
+                    <li>Emails auto-delete after a short time — no trace left behind</li>
+                </ul>
+                <p>
+                    Whether you're signing up for a free trial, joining a forum, testing a service, or just want to keep
+                    your main inbox clean, our temporary email service is the fastest and safest way to stay private
+                    online.
+                </p>
+                <p class="highlight">
+                    Generate your disposable email now — no signup, no hassle!
+                </p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Instant Generation</h4>
+                        <p>
+                            Create a new temporary email address with just one click - no
+                            registration required.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-copy"></i>
+                        <h4>Easy Copy</h4>
+                        <p>
+                            Copy your temporary email address to clipboard instantly with
+                            our convenient copy button.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h4>Auto Refresh</h4>
+                        <p>
+                            Inbox automatically refreshes every 5 seconds to show new
+                            messages instantly.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-trash"></i>
+                        <h4>Quick Delete</h4>
+                        <p>
+                            Delete your current email and generate a new one whenever you
+                            want.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="how-to-use">How to Use Our Service</h3>
+                <div class="steps-box">
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Generate Email</h4>
+                                <p>
+                                    Click the "Generate Temp Email" button to create your
+                                    temporary email address.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Copy Address</h4>
+                                <p>
+                                    Use the copy button to copy your temporary email address to
+                                    clipboard.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Check Messages</h4>
+                                <p>
+                                    Your inbox will automatically refresh to show new messages.
+                                    Click any message to view its full content.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Delete When Done</h4>
+                                <p>
+                                    Click the delete button to remove the current email and
+                                    generate a new one if needed.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <h3>Common Use Cases</h3>
+                <div class="use-cases-section">
+                    <ul class="use-cases">
+                        <li>
+                            <i class="fas fa-angle-right"></i> Sign up for free trials
+                            without risking spam
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right"></i> Test website registrations
+                            and notifications
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right"></i> Protect your privacy when
+                            using public services
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right"></i> Avoid marketing emails from
+                            online stores
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right"></i> Receive one-time verification
+                            codes
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="special-thanks">
+                    <h3><i class="fas fa-heart"></i> Special Thanks</h3>
+                    <p>
+                        We would like to express our sincere gratitude to the
+                        <a href="https://mail.tm/" target="_blank" rel="noopener noreferrer">Mail.tm</a> team for
+                        providing their free API service that makes this project possible.
+                        Their commitment to privacy and open accessibility has enabled us
+                        to create this temporary email solution.
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <div>
+                        <h3><i class="fas fa-exclamation-triangle"></i>Important Note</h3>
+                        <p>
+                            This temporary email service is for short-term use only. Please do not use these disposable
+                            email addresses for:
+                        </p>
+                        <ul>
+                            <li>Important accounts (banking, government, work, etc.)</li>
+                            <li>Financial services or payments</li>
+                            <li>Long-term communication or recovery purposes</li>
+                        </ul>
+                        <p>
+                            Emails are not stored forever — they auto-delete after a short time (or after inactivity).
+                            The email address itself may stop working or get recycled without warning.
+                        </p>
+                        <p class="highlight">
+                            Use at your own risk — always keep your real email safe for important stuff!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Bottom Banner Ad -->
+    <div class="mobile-ad bottom-ad">
+        <a href="#" target="_blank"><img src="ad-placeholder-bottom.jpg" alt="Sponsored Ad" loading="lazy"></a>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div id="contact" class="footer-contact">
+                <h3>Contact Us</h3>
+                <div class="social-links">
+                    <a href="https://github.com/vinodkumarjaipal" target="_blank" title="GitHub"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vinod-kumar-jaipal" target="_blank" title="LinkedIn"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:mr.tech418341@gmail.com" title="Email Us" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    &copy; <span id="currentYear"></span> Temp Mail Generator. All
+                    Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
