@@ -266,7 +266,7 @@ async function showMessage(id, div) {
         // Create a container for the email content
         const contentDiv = document.createElement("div");
         contentDiv.classList.add("message-content");
-        contentDiv.innerText = body;
+        contentDiv.innerHTML = linkify(body);
 
         // Create controls for the message
         const controlsDiv = document.createElement("div");
@@ -413,9 +413,8 @@ window.addEventListener("scroll", () => {
 });
 
 function linkify(text) {
-    // Regex to match URLs (http, https)
     return text.replace(
-        /(https?:\/\/[^\s\]\)]+)/g,
+        /(https?:\/\/[^\s]+)/g,
         '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
     );
 }
