@@ -1382,3 +1382,87 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
 }
+/* BLOG PAGE STYLES */
+
+.blog-container {
+    margin-top: 40px;
+}
+
+/* Blog Intro */
+.blog-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-intro h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.blog-intro p {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Blog Grid */
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Blog Card */
+.blog-card {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+/* Blog Title */
+.blog-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Blog Links */
+.blog-card a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.blog-card a:hover {
+    color: var(--primary-color);
+}
+
+/* Blog Description */
+.blog-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CTA */
+.blog-cta {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.blog-cta a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog-cta a:hover {
+    text-decoration: underline;
+}
