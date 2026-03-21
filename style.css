@@ -1473,3 +1473,12 @@ html {
 .blog-cta a:hover {
     text-decoration: underline;
 }
+.blog-cta p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+.blog-cta .cta-button:hover {
+    background-color: #00c4a7; /* slightly darker shade */
+    transform: translateY(-2px);
+}
