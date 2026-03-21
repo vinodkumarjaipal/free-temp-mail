@@ -202,16 +202,35 @@
 
         <div class="blog-cta">
             <p>Ready to protect your inbox?</p>
-            <a href="index.html" class="cta-button">Generate Your Free Temp Mail Now</a>
+            
         </div>
 
     </article>
+    <a href="index.html" class="cta-button">🚀 Generate Free Temp Mail Now</a>
+        <p><a href="blog.html">← Back to Blog</a> | <a href="index.html">Home</a></p>
+    </article>
+
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; <span id="currentYear"></span> Temp Mail Generator. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+// Mobile menu toggle
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const mainNav = document.querySelector(".main-nav");
+mobileMenuBtn.addEventListener("click", function () {
+    mainNav.classList.toggle("show");
+});
+</script>
 
 </main>
 
-<footer class="site-footer">
-    <p>&copy; 2026 Temp Mail Generator</p>
-</footer>
 
 </body>
 </html>
