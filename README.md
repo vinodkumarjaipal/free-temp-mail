@@ -25,7 +25,7 @@ Check out the live site deployed on **Netlify**:
 
 [Free Temp Mail Live](https://free-temp-mail.netlify.app/)  
 
-*(Replace with your actual Netlify URL)*
+
 
 ---
 
