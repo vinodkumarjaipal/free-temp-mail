@@ -23,7 +23,7 @@
 
 Check out the live site deployed on **Netlify**:
 
-[Free Temp Mail Live](https://free-temp-mail.netlify.app/)  
+[Free Temp Mail Live](https://quicktempbox.netlify.app/)  
 
 
 
@@ -36,7 +36,7 @@ This project is fully static (HTML, CSS, JS) and requires no backend to run for 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/vinodkumarjaipal/free-temp-mail.git
+git clone https://github.com/vinodkumarjaipal/quicktempbox.git
 Open index.html in your browser.
 
 Click Generate Email to start using a temporary email instantly.
@@ -46,7 +46,7 @@ Copy emails or messages, refresh inbox, and delete accounts as needed.
 Note: For backend email APIs (like mail.tm), ensure you have proper API access if integrating advanced features.
 
 📂 Project Structure
-free-temp-mail/
+quicktempbox/
 │
 ├─ index.html           # Main HTML page
 ├─ style.css            # Stylesheet
@@ -58,7 +58,7 @@ free-temp-mail/
 
 Vinod Kumar Jaipal
 
-GitHub Repository: https://github.com/vinodkumarjaipal/free-temp-mail
+GitHub Repository: https://github.com/vinodkumarjaipal/quicktempbox
 
 GitHub Profile: https://github.com/vinodkumarjaipal
 
@@ -68,7 +68,7 @@ This project is designed and maintained by Vinod, focusing on lightweight web to
 
 🔗 Related Links
 
-Free Temp Mail GitHub: https://github.com/vinodkumarjaipal/free-temp-mail
+Free Temp Mail GitHub: https://github.com/vinodkumarjaipal/quicktempbox
 
 Vinod Kumar Jaipal GitHub: https://github.com/vinodkumarjaipal
 
